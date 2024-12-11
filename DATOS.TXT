@@ -1,0 +1,5 @@
+curl -X POST http://localhost:8080/users -H "Content-Type: application/json" -d '{"name":"Jessica Villa","age":25,"class":"2266301"}'
+curl -X POST http://localhost:8080/users -H "Content-Type: application/json" -d '{"name":"Alejandro Marin","age":27,"class":"2259353"}'
+
+docker build -t go-sqlite-api -f docker/Dockerfile .
+docker run -p 8080:8080 go-sqlite-api
